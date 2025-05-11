@@ -566,7 +566,6 @@ right_pressed:
 move_left:
     li   x7, 24         # leftmost allowed X
     beq  x13, x7, main_loop  # if XPOS==24, skip move
-    sw   x12, 0(x6)
     addi x13, x13, -1   # XPOS--
     addi x6,  x6,  -32  # VGA addr -= 32
     addi x11, x11, -32  # RAM addr -= 32
@@ -576,7 +575,6 @@ move_left:
 move_right:
     li   x7, 47         # rightmost allowed X
     beq  x13, x7, main_loop  # if XPOS==47, skip move
-    sw   x12, 0(x6)
     addi x13, x13,  1   # XPOS++
     addi x6,  x6,   32  # VGA addr += 32
     addi x11, x11,   32 # RAM addr += 32
@@ -586,7 +584,6 @@ move_right:
 move_up:
     li   x7, 0          # topmost allowed Y
     beq  x14, x7, main_loop  # if YPOS==0, skip move
-    sw   x12, 0(x6)
     addi x14, x14, -1   # YPOS--
     addi x6,  x6,  -1
     addi x11, x11,  -1
@@ -596,7 +593,6 @@ move_up:
 move_down:
     li   x7, 26         # bottommost allowed Y
     beq  x14, x7, main_loop  # if YPOS==26, skip move
-    sw   x12, 0(x6)
     addi x14, x14,  1   # YPOS++
     addi x6,  x6,   1
     addi x11, x11,   1
