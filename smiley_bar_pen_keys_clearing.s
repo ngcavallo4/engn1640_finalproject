@@ -488,7 +488,7 @@ done:
  addi x18, x0, 35       # 0x00023
 
 li   x20, 32        # x20 ← starting X coordinate
-li   x21, 3         # x21 ← starting Y coordinate
+li   x21, 5         # x21 ← starting Y coordinate
 slli x20, x20, 5    # x20 = x20 << 5
 
 add  x11, x20, x21  # x11 = pixel index (RAM address without offset)
@@ -502,7 +502,7 @@ sw x17 0(x6) # VGA store
 
 # track logical position
 li   x13, 32        # XPOS ← 32 (must stay 24…47)
-li   x14, 3         # YPOS ←  2 (must stay  0…26)
+li   x14, 5         # YPOS ←  2 (must stay  0…26)
 
 # Blank‐pixel value
 addi x12, x0, 0     # x12 = 0
