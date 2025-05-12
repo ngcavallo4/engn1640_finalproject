@@ -242,399 +242,42 @@ verify_start:
 #              compute index in x25 and call verify_coord
 #————————————————————————————
 verify_list:
-    # (9,5)
-    addi  x23, x0,  9        # static X
-    addi  x24, x0,  5        # static Y
-    slli  x25, x23, 5        # x25 = X << 5
-    add   x25, x25, x24      # x25 = X*32 + Y
-    jal   ra, verify_coord
-
-    # (10,5)
-    addi  x23, x0, 10
-    addi  x24, x0,  5
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (11,5)
-    addi  x23, x0, 11
-    addi  x24, x0,  5
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
     # (12,5)
+    addi  x23, x0, 12        # X = 12
+    addi  x24, x0,  5        # Y =  5
+    slli  x25, x23, 5        # X*32
+    add   x25, x25, x24      # X*32 + Y
+    jal   ra, verify_coord
+
+    # (12,6)
     addi  x23, x0, 12
-    addi  x24, x0,  5
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (13,5)
-    addi  x23, x0, 13
-    addi  x24, x0,  5
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (14,5)
-    addi  x23, x0, 14
-    addi  x24, x0,  5
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (15,6)
-    addi  x23, x0, 15
     addi  x24, x0,  6
     slli  x25, x23, 5
     add   x25, x25, x24
     jal   ra, verify_coord
 
-    # (16,6)
-    addi  x23, x0, 16
-    addi  x24, x0,  6
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (17,7)
-    addi  x23, x0, 17
+    # (12,7)
+    addi  x23, x0, 12
     addi  x24, x0,  7
     slli  x25, x23, 5
     add   x25, x25, x24
     jal   ra, verify_coord
 
-    # (18,8)
-    addi  x23, x0, 18
+    # (12,8)
+    addi  x23, x0, 12
     addi  x24, x0,  8
     slli  x25, x23, 5
     add   x25, x25, x24
     jal   ra, verify_coord
 
-    # (19,9)
-    addi  x23, x0, 19
+    # (12,9)
+    addi  x23, x0, 12
     addi  x24, x0,  9
     slli  x25, x23, 5
     add   x25, x25, x24
     jal   ra, verify_coord
 
-    # (19,10)
-    addi  x23, x0, 19
-    addi  x24, x0, 10
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (20,11)
-    addi  x23, x0, 20
-    addi  x24, x0, 11
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (20,12)
-    addi  x23, x0, 20
-    addi  x24, x0, 12
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (20,13)
-    addi  x23, x0, 20
-    addi  x24, x0, 13
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (20,14)
-    addi  x23, x0, 20
-    addi  x24, x0, 14
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (20,15)
-    addi  x23, x0, 20
-    addi  x24, x0, 15
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (19,16)
-    addi  x23, x0, 19
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (19,17)
-    addi  x23, x0, 19
-    addi  x24, x0, 17
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (18,18)
-    addi  x23, x0, 18
-    addi  x24, x0, 18
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (17,19)
-    addi  x23, x0, 17
-    addi  x24, x0, 19
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (16,20)
-    addi  x23, x0, 16
-    addi  x24, x0, 20
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (15,20)
-    addi  x23, x0, 15
-    addi  x24, x0, 20
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (14,21)
-    addi  x23, x0, 14
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (13,21)
-    addi  x23, x0, 13
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (12,21)
-    addi  x23, x0, 12
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (11,21)
-    addi  x23, x0, 11
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (10,21)
-    addi  x23, x0, 10
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (9,21)
-    addi  x23, x0,  9
-    addi  x24, x0, 21
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (8,20)
-    addi  x23, x0,  8
-    addi  x24, x0, 20
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (7,20)
-    addi  x23, x0,  7
-    addi  x24, x0, 20
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (6,19)
-    addi  x23, x0,  6
-    addi  x24, x0, 19
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (5,18)
-    addi  x23, x0,  5
-    addi  x24, x0, 18
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (4,17)
-    addi  x23, x0,  4
-    addi  x24, x0, 17
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (4,16)
-    addi  x23, x0,  4
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (3,15)
-    addi  x23, x0,  3
-    addi  x24, x0, 15
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (3,14)
-    addi  x23, x0,  3
-    addi  x24, x0, 14
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (3,13)
-    addi  x23, x0,  3
-    addi  x24, x0, 13
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (3,12)
-    addi  x23, x0,  3
-    addi  x24, x0, 12
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (3,11)
-    addi  x23, x0,  3
-    addi  x24, x0, 11
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (4,10)
-    addi  x23, x0,  4
-    addi  x24, x0, 10
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (4,9)
-    addi  x23, x0,  4
-    addi  x24, x0,  9
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (5,8)
-    addi  x23, x0,  5
-    addi  x24, x0,  8
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (6,7)
-    addi  x23, x0,  6
-    addi  x24, x0,  7
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (7,6)
-    addi  x23, x0,  7
-    addi  x24, x0,  6
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (8,6)
-    addi  x23, x0,  8
-    addi  x24, x0,  6
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (9,10)
-    addi  x23, x0,  9
-    addi  x24, x0, 10
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (8,15)
-    addi  x23, x0,  8
-    addi  x24, x0, 15
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (14,10)
-    addi  x23, x0, 14
-    addi  x24, x0, 10
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (9,16)
-    addi  x23, x0,  9
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (10,16)
-    addi  x23, x0, 10
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (11,16)
-    addi  x23, x0, 11
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (12,16)
-    addi  x23, x0, 12
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (13,16)
-    addi  x23, x0, 13
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (14,16)
-    addi  x23, x0, 14
-    addi  x24, x0, 16
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    # (15,15)
-    addi  x23, x0, 15
-    addi  x24, x0, 15
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    jal   ra, verify_coord
-
-    ret
+    jal ra, user_win
 
 # —————————————————————————————
 # verify_coord: x25 = static pixel index; x20 = offset_index
@@ -644,29 +287,98 @@ verify_coord:
 # x26 = user coord + static offset
 
     add   x26, x25, x20      # x26 = user_index = static_index + offset
+    nop
     lw    x27, 0(x26)        # x27 = word at RAM[user_index]
     nop 
-    bne   x27, x31, verify_fail
+    bne   x27, x31, user_lose 
     ret
 
 # —————————————————————————————
-# verify_fail: first mismatch — jump here
-#             clear screen, then print "YOU FAILED :(" in red
+# user_lose: clear & then display “YOU FAILED :(”
+#————————————————————————————
+user_lose:
+    jal   ra, clear_screen
+    jal   ra, display_failed
+    ret
+
 # —————————————————————————————
-verify_fail: 
-# --- clear entire char buffer (0…2047) using only BEQ/BNE ---
+# user_lose: clear & then display “YOU FAILED :(”
+#————————————————————————————
+user_lose:
+    jal   ra, clear_screen
+    jal   ra, display_won
+    ret
+
+# —————————————————————————————
+# clear_screen: wipe VGA buffer 0…2047
+#————————————————————————————
+
+
+clear_screen:
     addi  x26, x0, 0        # idx = 0
-    
-    addi x27, x0, 2047
-    addi x27, x27, 1         # end = 2048 entries
+
 clr_loop:
+
     add   x12, x3, x26      # addr = VGA_BASE + idx
     addi  x13, x0, 32       # data = ASCII 32, color=0
+    nop
     sw    x13, 0(x12)
     nop
     addi  x26, x26, 1       # idx++
-    sub   x29, x27, x26     # x29 = end - idx
+    sub   x29, x3, x26     # x29 = end - idx
     bne   x29, x0, clr_loop # if idx < end (i.e. end-idx ≠ 0) repeat
+	ret 
+
+# —————————————————————————————
+# write_char: draw one glyph at (x23,y24), then x23++
+#————————————————————————————
+
+write_char:
+    or    x30, x30, x28     # x30 holds character, color|ASCII
+    slli  x25, x23, 5
+    add   x25, x25, x24
+    add   x25, x3, x25      # VGA_BASE + index
+    sw    x30, 0(x25)
+    addi  x23, x23, 1
+    ret
+
+# —————————————————————————————
+# display_failed: print centered “YOU FAILED :(” in red
+#————————————————————————————
+
+display_failed:
+
+    # --- build green-only color nibble ---
+    addi  x28, x0, 15       # green = 0xF
+    slli  x28, x28, 16      # green << 12
+
+    # --- starting position for centered text ---
+    addi  x23, x0, 17       # X = 17
+    addi  x24, x0, 13       # Y = 13
+
+    # --- print "YOU FAILED :(" ---
+    addi  x30, x0, 'Y'
+    jal ra, write_char
+    addi  x30, x0, 'O'
+    jal ra, write_char
+    addi  x30, x0, 'U'
+    jal ra, write_char
+    addi  x30, x0, ' ' 
+    jal ra, write_char
+    addi  x30, x0, 'W'
+    jal ra, write_char
+    addi  x30, x0, 'O'
+    jal ra, write_char
+    addi  x30, x0, 'N'
+    jal ra, write_char
+    
+    j game_over
+
+# —————————————————————————————
+# display_failed: print centered “YOU FAILED :(” in red
+#————————————————————————————
+
+display_failed:
 
     # --- build red‐only color nibble ---
     addi  x28, x0, 15       # red = 0xF
@@ -675,20 +387,7 @@ clr_loop:
     # --- starting position for centered text ---
     addi  x23, x0, 17       # X = 17
     addi  x24, x0, 13       # Y = 13
-	
-    j write_you_failed 
 
-# write_char macro (uses only BEQ/BNE in verify_fail, so fine)
-write_char:
-    or    x30, x30, x28     # color|ASCII
-    slli  x25, x23, 5
-    add   x25, x25, x24
-    add   x25, x3, x25      # VGA_BASE + index
-    sw    x30, 0(x25)
-    addi  x23, x23, 1
-    ret
-
-write_you_failed:
     # --- print "YOU FAILED :(" ---
     addi  x30, x0, 'Y'
     jal ra, write_char
@@ -717,6 +416,10 @@ write_you_failed:
     addi  x30, x0, '(' 
     jal ra, write_char
 
-   j end 
+    j game_over
 
-end: add x0 x0 x0 # (halt) 
+# —————————————————————————————
+# game_over: halt program
+#————————————————————————————
+game_over:
+    add x0 x0 x0 # (halt) 
