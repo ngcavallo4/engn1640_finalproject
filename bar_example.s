@@ -89,11 +89,15 @@ bar_generator:
     # Set constant x = 12
     addi x5, x0, 12        # x = 12
 
+
+# Set constant x = 12
+addi x5, x0, 12        # x = 12
+
     # Initialize y = 5
     addi x6, x0, 5         # y = 5
 
-    # Set upper bound y = 9
-    addi x7, x0, 9      
+# Set upper bound y = 9
+addi x7, x0, 9      
 
 bar_loop:
     # Compute address: x8 = x << 5 + y
@@ -340,10 +344,6 @@ verify_list:
     add   x25, x25, x24
     jal   ra, verify_coord
 
-
-    jal ra, user_won
-
-
 # —————————————————————————————
 # verify_coord: x25 = static pixel index; x20 = offset_index
 # —————————————————————————————
@@ -368,7 +368,6 @@ user_lose:
     jal   ra, display_failed
     jal   ra, game_over
 
-
 # —————————————————————————————
 # user_won: clear & then display “YOU WON :)”
 #————————————————————————————
@@ -376,7 +375,6 @@ user_won:
     jal   ra, clear_screen
     jal   ra, display_won
     jal   ra, game_over
-
 
 # —————————————————————————————
 # clear_screen: wipe VGA buffer 0…2047
@@ -444,14 +442,6 @@ display_won:
     jal ra, write_char
     addi  x30, x0, 'N'
     jal ra, write_char
-    addi  x30, x0, ' '
-    jal ra, write_char
-    addi  x30, x0, ':'
-    jal ra, write_char
-    addi  x30, x0, ')'
-    jal ra, write_char
-
-
 # —————————————————————————————
 # display_failed: print centered “YOU FAILED :(” in red
 #————————————————————————————
@@ -494,7 +484,6 @@ display_failed:
     jal ra, write_char
     addi  x30, x0, '('
     jal ra, write_char
-
 
 # —————————————————————————————
 # game_over: halt program
