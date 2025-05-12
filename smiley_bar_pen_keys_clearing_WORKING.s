@@ -1096,7 +1096,7 @@ write_you_failed:
 
    j end 
 
-end: add x0 x0 x0 (halt) 
+end: add x0 x0 x0 # (halt) 
 
 
 
