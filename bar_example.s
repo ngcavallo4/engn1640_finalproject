@@ -343,10 +343,10 @@ write_char:
     ret
 
 # —————————————————————————————
-# display_failed: print centered “YOU FAILED :(” in red
+# display_won: print centered “YOU WON :)” in green
 #————————————————————————————
 
-display_failed:
+display_won:
 
     # --- build green-only color nibble ---
     addi  x28, x0, 15       # green = 0xF
@@ -370,6 +370,12 @@ display_failed:
     addi  x30, x0, 'O'
     jal ra, write_char
     addi  x30, x0, 'N'
+    jal ra, write_char
+    addi  x30, x0, ' ' 
+    jal ra, write_char
+    addi  x30, x0, ':' 
+    jal ra, write_char
+    addi  x30, x0, ')' 
     jal ra, write_char
     
     j game_over
