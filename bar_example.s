@@ -70,10 +70,10 @@ store_ram_vga:
 bar_generator:
 
 # Set constant x = 12
-addi x5, x0, 23        # x = 12
+addi x5, x0, 12        # x = 12
 
 # Initialize y = 5
-addi x6, x0, 0         # y = 5
+addi x6, x0, 5         # y = 5
 
 # Set upper bound y = 9
 addi x7, x0, 9      
@@ -96,19 +96,19 @@ bar_loop:
 # — Initialization (after you compute x11 and x6) —
 # ------------------------------------------------------------
 #  Build BUTTON_BASE = 7168  (0x1C00) into x4
-    addi x4, x0, 2047       # x4 = 2047
-    addi x4, x4, 2047      # x4 = 4094
-    addi x4, x4, 2047     # x4 = 6141
-    addi x4, x4, 1027    # x4 = 7168
+addi x4, x0, 2047       # x4 = 2047
+addi x4, x4, 2047      # x4 = 4094
+addi x4, x4, 2047     # x4 = 6141
+addi x4, x4, 1027    # x4 = 7168
 
-    # Build SWITCHES_BASE = 7169  (0x1C00) into x5
-   addi x5, x0, 2047       # x5 = 2047
-    addi x5, x5, 2047      # x4 = 4094
-    addi x5, x5, 2047     # x5 = 6141
-    addi x5, x5, 1028    # x5 = 7169
+# Build SWITCHES_BASE = 7169  (0x1C00) into x5
+addi x5, x0, 2047       # x5 = 2047
+addi x5, x5, 2047      # x4 = 4094
+addi x5, x5, 2047     # x5 = 6141
+addi x5, x5, 1028    # x5 = 7169
 
- # build constant black # in x18 
- addi x18, x0, 35       # 0x00023
+# build constant black # in x18 
+addi x18, x0, 35       # 0x00023
 
 li   x20, 32        # x20 ← starting X coordinate
 li   x21, 5         # x21 ← starting Y coordinate
@@ -277,7 +277,7 @@ verify_list:
     add   x25, x25, x24
     jal   ra, verify_coord
 
-    jal ra, user_win
+    jal ra, user_won
 
 # —————————————————————————————
 # verify_coord: x25 = static pixel index; x20 = offset_index
@@ -299,21 +299,19 @@ verify_coord:
 user_lose:
     jal   ra, clear_screen
     jal   ra, display_failed
-    ret
+    jal   ra, game_over
 
 # —————————————————————————————
-# user_lose: clear & then display “YOU FAILED :(”
+# user_won: clear & then display “YOU WON :)”
 #————————————————————————————
-user_lose:
+user_won:
     jal   ra, clear_screen
     jal   ra, display_won
-    ret
+    jal   ra, game_over
 
 # —————————————————————————————
 # clear_screen: wipe VGA buffer 0…2047
 #————————————————————————————
-
-
 clear_screen:
     addi  x26, x0, 0        # idx = 0
 
@@ -377,8 +375,6 @@ display_won:
     jal ra, write_char
     addi  x30, x0, ')' 
     jal ra, write_char
-    
-    j game_over
 
 # —————————————————————————————
 # display_failed: print centered “YOU FAILED :(” in red
@@ -421,8 +417,6 @@ display_failed:
     jal ra, write_char
     addi  x30, x0, '(' 
     jal ra, write_char
-
-    j game_over
 
 # —————————————————————————————
 # game_over: halt program
