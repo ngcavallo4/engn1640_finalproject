@@ -2,7 +2,6 @@
 addi x3, x0, 2047
 addi x3, x3, 1
 
-
 # Generate 20-bit value into x30 (purple + "=")
 addi x30, x0, 14     # nibble = 0xE3B
 slli x30, x30, 4

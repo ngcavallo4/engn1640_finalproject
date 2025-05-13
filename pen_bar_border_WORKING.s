@@ -133,19 +133,6 @@ vertical_loop:
 
 #j list_coords
 
-
-
-
-# VGA offset = 2048
-addi x3, x0, 2047
-addi x3, x3, 1
-
-
-# VGA offset = 2048
-addi x3, x0, 2047
-addi x3, x3, 1
-
-
 # Generate 20-bit value into x31 (white + '#')
 addi x31, x0, 15
 slli x31, x31, 4

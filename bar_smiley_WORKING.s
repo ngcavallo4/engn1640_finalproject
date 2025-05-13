@@ -20,6 +20,251 @@ addi x30, x30, 15
 slli x30, x30, 8
 addi x30, x30, 124       # 0xfff7c
 
+    # ────────────────────────────────────────────────────────────
+    # Assume x3 = 2048 (VGA offset) and x31 holds the ball character
+    # ────────────────────────────────────────────────────────────
+
+    # === list_coords ===
+    addi x7, x0, 9
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 10
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 11
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 12
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 13
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 14
+    addi x8, x0, 5
+    jal  store_coord
+
+    addi x7, x0, 15
+    addi x8, x0, 6
+    jal  store_coord
+
+    addi x7, x0, 16
+    addi x8, x0, 6
+    jal  store_coord
+
+    addi x7, x0, 17
+    addi x8, x0, 7
+    jal  store_coord
+
+    addi x7, x0, 18
+    addi x8, x0, 8
+    jal  store_coord
+
+    addi x7, x0, 19
+    addi x8, x0, 9
+    jal  store_coord
+
+    addi x7, x0, 19
+    addi x8, x0, 10
+    jal  store_coord
+
+    addi x7, x0, 20
+    addi x8, x0, 11
+    jal  store_coord
+
+    addi x7, x0, 20
+    addi x8, x0, 12
+    jal  store_coord
+
+    addi x7, x0, 20
+    addi x8, x0, 13
+    jal  store_coord
+
+    addi x7, x0, 20
+    addi x8, x0, 14
+    jal  store_coord
+
+    addi x7, x0, 20
+    addi x8, x0, 15
+    jal  store_coord
+
+    addi x7, x0, 19
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 19
+    addi x8, x0, 17
+    jal  store_coord
+
+    addi x7, x0, 18
+    addi x8, x0, 18
+    jal  store_coord
+
+    addi x7, x0, 17
+    addi x8, x0, 19
+    jal  store_coord
+
+    addi x7, x0, 16
+    addi x8, x0, 20
+    jal  store_coord
+
+    addi x7, x0, 15
+    addi x8, x0, 20
+    jal  store_coord
+
+    addi x7, x0, 14
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 13
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 12
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 11
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 10
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 9
+    addi x8, x0, 21
+    jal  store_coord
+
+    addi x7, x0, 8
+    addi x8, x0, 20
+    jal  store_coord
+
+    addi x7, x0, 7
+    addi x8, x0, 20
+    jal  store_coord
+
+    addi x7, x0, 6
+    addi x8, x0, 19
+    jal  store_coord
+
+    addi x7, x0, 5
+    addi x8, x0, 18
+    jal  store_coord
+
+    addi x7, x0, 4
+    addi x8, x0, 17
+    jal  store_coord
+
+    addi x7, x0, 4
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 3
+    addi x8, x0, 15
+    jal  store_coord
+
+    addi x7, x0, 3
+    addi x8, x0, 14
+    jal  store_coord
+
+    addi x7, x0, 3
+    addi x8, x0, 13
+    jal  store_coord
+
+    addi x7, x0, 3
+    addi x8, x0, 12
+    jal  store_coord
+
+    addi x7, x0, 3
+    addi x8, x0, 11
+    jal  store_coord
+
+    addi x7, x0, 4
+    addi x8, x0, 10
+    jal  store_coord
+
+    addi x7, x0, 4
+    addi x8, x0, 9
+    jal  store_coord
+
+    addi x7, x0, 5
+    addi x8, x0, 8
+    jal  store_coord
+
+    addi x7, x0, 6
+    addi x8, x0, 7
+    jal  store_coord
+
+    addi x7, x0, 7
+    addi x8, x0, 6
+    jal  store_coord
+
+    addi x7, x0, 8
+    addi x8, x0, 6
+    jal  store_coord
+
+    addi x7, x0, 9
+    addi x8, x0, 10
+    jal  store_coord
+
+    addi x7, x0, 14
+    addi x8, x0, 10
+    jal  store_coord
+
+    addi x7, x0, 8
+    addi x8, x0, 15
+    jal  store_coord
+
+    addi x7, x0, 9
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 10
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 11
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 12
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 13
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 14
+    addi x8, x0, 16
+    jal  store_coord
+
+    addi x7, x0, 15
+    addi x8, x0, 15
+    jal  store_coord
+    
+    j splitter
+
+    # ────────────────────────────────────────────────────────────
+    # Helper: compute index, store to RAM then VGA, return
+    # ────────────────────────────────────────────────────────────
+store_coord:
+    slli  x7, x7, 5        # x7 = x_index * 32
+    add   x9, x7, x8      # x9 = x_index*32 + y_index
+    slli  x10, x9, 2      # byte address = index << 2
+    sw    x31, 0(x10)     # RAM store
+    add   x10, x9, x3     # x10 = index + 2048
+    slli  x10, x10, 2     # byte address = (index+2048)<<2
+    sw    x31, 0(x10)     # VGA store
+    jalr  x0, 0(x1)       # return
+
+splitter: 
 #------------------------------------------------------------
 # Vertical splitter
 #------------------------------------------------------------
@@ -53,251 +298,3 @@ vertical_loop:
     # Compare y and y_end using subtraction
     sub x11, x7, x6    
     bne x11, x0, vertical_loop
-
-j list_coords
-
-#----------------------------
-# store ram vga helper func
-#----------------------------
-# store_ram_vga assumes x7 = x coordinate, x8 = y coordinate
-store_ram_vga:
-    mul x9, x7, x12       # x9 = x * 32 (x12 = 32)
-    add x9, x9, x8        # x9 = x * 32 + y (index)
-    slli x13, x9, 2       # x13 = byte address
-    sw x31, 0(x13)        # store into RAM
-
-    add x14, x3, x9       # VGA addr = base + index
-    slli x14, x14, 2      # byte address
-    sw x31, 0(x14)        # store into VGA
-
-    ret
-#----------------------------
-# list coords helper func
-#----------------------------
-list_coords:
-# === list_coords ===
-li x12 32 # 32 is offset for address calculation 
-
-li x7, 9     # x
-li x8, 5     # y
-jal ra, store_ram_vga
-
-li x7, 10
-li x8, 5
-jal ra, store_ram_vga
-
-li x7, 11
-li x8, 5
-jal ra, store_ram_vga
-
-li x7, 12
-li x8, 5
-jal ra, store_ram_vga
-
-li x7, 13
-li x8, 5
-jal ra, store_ram_vga
-
-li x7, 14
-li x8, 5
-jal ra, store_ram_vga
-
-li x7, 15
-li x8, 6
-jal ra, store_ram_vga
-
-li x7, 16
-li x8, 6
-jal ra, store_ram_vga
-
-li x7, 17
-li x8, 7
-jal ra, store_ram_vga
-
-li x7, 18
-li x8, 8
-jal ra, store_ram_vga
-
-li x7, 19
-li x8, 9
-jal ra, store_ram_vga
-
-li x7, 19
-li x8, 10
-jal ra, store_ram_vga
-
-li x7, 20
-li x8, 11
-jal ra, store_ram_vga
-
-li x7, 20
-li x8, 12
-jal ra, store_ram_vga
-
-li x7, 20
-li x8, 13
-jal ra, store_ram_vga
-
-li x7, 20
-li x8, 14
-jal ra, store_ram_vga
-
-li x7, 20
-li x8, 15
-jal ra, store_ram_vga
-
-li x7, 19
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 19
-li x8, 17
-jal ra, store_ram_vga
-
-li x7, 18
-li x8, 18
-jal ra, store_ram_vga
-
-li x7, 17
-li x8, 19
-jal ra, store_ram_vga
-
-li x7, 16
-li x8, 20
-jal ra, store_ram_vga
-
-li x7, 15
-li x8, 20
-jal ra, store_ram_vga
-
-li x7, 14
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 13
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 12
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 11
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 10
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 9
-li x8, 21
-jal ra, store_ram_vga
-
-li x7, 8
-li x8, 20
-jal ra, store_ram_vga
-
-li x7, 7
-li x8, 20
-jal ra, store_ram_vga
-
-li x7, 6
-li x8, 19
-jal ra, store_ram_vga
-
-li x7, 5
-li x8, 18
-jal ra, store_ram_vga
-
-li x7, 4
-li x8, 17
-jal ra, store_ram_vga
-
-li x7, 4
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 3
-li x8, 15
-jal ra, store_ram_vga
-
-li x7, 3
-li x8, 14
-jal ra, store_ram_vga
-
-li x7, 3
-li x8, 13
-jal ra, store_ram_vga
-
-li x7, 3
-li x8, 12
-jal ra, store_ram_vga
-
-li x7, 3
-li x8, 11
-jal ra, store_ram_vga
-
-li x7, 4
-li x8, 10
-jal ra, store_ram_vga
-
-li x7, 4
-li x8, 9
-jal ra, store_ram_vga
-
-li x7, 5
-li x8, 8
-jal ra, store_ram_vga
-
-li x7, 6
-li x8, 7
-jal ra, store_ram_vga
-
-li x7, 7
-li x8, 6
-jal ra, store_ram_vga
-
-li x7, 8
-li x8, 6
-jal ra, store_ram_vga
-
-li x7, 9
-li x8, 10
-jal ra, store_ram_vga
-
-li x7, 8
-li x8, 15
-jal ra, store_ram_vga
-
-li x7, 14
-li x8, 10
-jal ra, store_ram_vga
-
-li x7, 9
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 10
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 11
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 12
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 13
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 14
-li x8, 16
-jal ra, store_ram_vga
-
-li x7, 15
-li x8, 15
-jal ra, store_ram_vga
