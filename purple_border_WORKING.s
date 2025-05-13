@@ -2,7 +2,7 @@
     addi x3 x0 2047
     addi x3 x3 1 	     # VGA base word index
 
-    # 2) Build 20‑bit purple “=” in x30
+    # Purple "="
     addi x30, x0, 14     # nibble = 0xE3B
     slli x30, x30, 4
     addi x30, x30, 3
