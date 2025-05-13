@@ -1,3 +1,14 @@
+#———————————————————————————————————————————
+
+# This program stores, then loads a white hash
+# in location 1024 in RAM, then stores it in 
+# location 512 in RAM. 
+
+#———————————————————————————————————————————
+
+
+
+
 # VGA offset = 2048
 addi x3, x0, 2047
 addi x3, x3, 1

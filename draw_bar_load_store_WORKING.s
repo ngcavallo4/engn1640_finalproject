@@ -1,10 +1,12 @@
-# VGA offset = 8192
-# addi x3, x0, 2047
-# addi x3, x3, 2047
-# addi x3, x3, 2047
-# addi x3, x3, 2047
-# addi x3, x3, 4
+###################################################
 
+# This code generates a vertical bar of white hashes
+# on the VGA screen and stores the value in RAM. It 
+# also loads the value from RAM to verify the value 
+# stored in the VGA memory, then stores it in a different
+# location in RAM.
+
+###################################################
 # VGA offset = 2048
 addi x3, x0, 2047
 addi x3, x3, 1
